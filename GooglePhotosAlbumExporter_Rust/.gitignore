@@ -1,0 +1,28 @@
+# Track the application sources and documentation. Runtime folders may have
+# arbitrary names chosen in config.json, so keep other root entries local.
+/*
+!/.gitignore
+!/.github/
+!/Cargo.toml
+!/Cargo.lock
+!/LICENSE
+!/README.md
+!/SHA256SUMS.txt
+!/config.example.json
+!/RUN.bat
+!/SETUP.bat
+!/UNINSTALL.bat
+!/VERIFY.bat
+!/run.ps1
+!/setup.ps1
+!/select-albums.ps1
+!/uninstall.ps1
+!/src/
+!/tests/
+!/docs/
+!/examples/
+
+*.incomplete.jsonl
+*.error.txt
+*.building
+*.compatible.building

@@ -1,0 +1,36 @@
+name: GPAE static tests and Windows build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rust-and-js:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rust formatting
+        run: cargo fmt --all -- --check
+      - name: Rust unit tests
+        run: cargo test --locked
+      - name: Rust lints
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: JavaScript syntax
+        run: node --check src/photos.js
+      - name: Photos adapter mock tests
+        run: node --test tests/photos_adapter.test.cjs
+      - name: Release build
+        run: cargo build --locked --release

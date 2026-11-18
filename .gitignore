@@ -1,0 +1,39 @@
+# Public repository contents
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/.github/
+!/docs/
+!/packaging/
+!/scripts/
+!/GooglePhotosAlbumExporter_Rust/
+
+# CI and release documentation for the exporter
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/ci.yml
+/docs/*
+!/docs/RELEASE_JA.md
+
+# Local configuration, browser sessions, output, and build artifacts
+config.json
+config.local.json
+chrome-profile*/
+.gpae-*
+albums_*/
+albums_*.json
+*.jsonl
+*.incomplete.jsonl
+*.error.txt
+*.building
+*.log
+*.exe
+*.pdb
+*.zip
+*.zip.sha256
+.env
+.env.*
+**/target/

@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "account": "example@gmail.com",
+  "source": "google-photos-web-cdp",
+  "status": "PARTIAL",
+  "started_unix_seconds": 1793970000,
+  "finished_unix_seconds": 1793970010,
+  "validation": {
+    "album_count_reported": null,
+    "album_count_enumerated": 1,
+    "album_list_rechecked": true,
+    "album_count_saved": 1,
+    "membership_count_saved": 1,
+    "albums_with_unverified_member_count": 0,
+    "missing_album_title_count": 0,
+    "missing_filename_count": 1,
+    "missing_timestamp_count": 0,
+    "resumed_albums": 0,
+    "access_denied_album_ids": [],
+    "overall_completeness_verified": false,
+    "scope": "albums returned by the Photos album listing; hidden or omitted albums are outside observable coverage"
+  },
+  "error": null,
+  "albums": [
+    {
+      "album_id": "example_album_1",
+      "title": "グランドキャニオン",
+      "url": null,
+      "is_shared": false,
+      "owner_actor_id": null,
+      "owned_by_account": null,
+      "reported_count": 1,
+      "membership_count": 1,
+      "membership_count_verified": true,
+      "collected_unix_seconds": 1793970005,
+      "items": [
+        {
+          "id": "media-example-1",
+          "position": 1,
+          "file_name": null,
+          "taken_unix_milliseconds": 1700000000123,
+          "creation_unix_milliseconds": null,
+          "mime_type": null,
+          "size_bytes": null,
+          "dedup_key": null
+        }
+      ]
+    }
+  ]
+}
